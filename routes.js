@@ -18,7 +18,7 @@ router.get('/', function (req, res) {
 
 //  routes
 config.servers.forEach(server => {
-    router.route(`/${server}`).post(require(`${_servers_}${server}`).index);
+    router.route(`/${server}`).get(require(`${_servers_}${server}`).index);
 });
 // Export API routes
 module.exports = router;
